@@ -1,0 +1,6 @@
+# vs code workspace settings
+.vscode/
+
+# complied output files
+*.exe
+*.out
