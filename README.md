@@ -4,3 +4,4 @@
 
 1. Intro to Programming & Flowcharts
 2. Write Your First Program in C++
+3. If-Else, While loop & Lots of Patterns
