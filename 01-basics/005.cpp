@@ -132,6 +132,8 @@ bool isPrime(int n)
 }
 
 // Leet code questions
+
+// Leetcode 1281: Subtract the Product and Sum of Digits of an Integer
 int leetcode_1_subtractProductAndSum(int n)
 {
     int sum = 0, product = 1;
@@ -148,6 +150,7 @@ int leetcode_1_subtractProductAndSum(int n)
     return product - sum;
 }
 
+// Leetcode 191: Number of 1 Bits
 // uint32_t => 32 bit binary number
 int leetcode_2_hammingWeight(uint32_t n)
 {
