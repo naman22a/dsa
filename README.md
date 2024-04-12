@@ -9,3 +9,4 @@
 5. Bitwise Operators, For Loops, Operator Precedence & Variable Scoping
 6. Binary & Decimal Number System
 7. LeetCode Problem Solving Session
+8. Switch Statement & Functions
