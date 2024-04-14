@@ -10,3 +10,7 @@
 6. Binary & Decimal Number System
 7. LeetCode Problem Solving Session
 8. Switch Statement & Functions
+
+## 📃 Arrays
+
+9. Introduction to Arrays
