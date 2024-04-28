@@ -14,3 +14,4 @@
 ## 📃 Arrays
 
 9. Introduction to Arrays
+10. Solving LeetCode/CodeStudio Questions on Arrays
