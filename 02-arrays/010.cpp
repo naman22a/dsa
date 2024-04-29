@@ -272,9 +272,61 @@ void sort_0_1_alt(vector<int> &arr)
 
 // Q10:
 // Leetcode 75: Sort Colors
-// TODO: solve this question
+// TC: O(n)
+// SC: O(1)
+// single pass
 void sortColors(vector<int> &nums)
 {
+    // using quicksort partition aka Dutch National Flag algorithm
+    int left = 0;
+    int right = nums.size() - 1;
+
+    int i = 0;
+
+    while (i <= right)
+    {
+        if (nums[i] == 0)
+        {
+            swap(nums[left], nums[i]);
+            left++;
+            i++;
+        }
+        else if (nums[i] == 2)
+        {
+            swap(nums[i], nums[right]);
+            right--;
+            // i++; // don't increment i, as it puts zero in between 1's
+        }
+    }
+}
+
+// TC: O(n)
+// SC: O(1)
+// double pass
+void sortColors_alt_bucket_sort(vector<int> &nums)
+{
+    // this question is solved using bucket sort => TC: O(n)
+    // there are 3 types of buckets (0, 1, 2)
+    vector<int> buckets(3);
+
+    // frequency arrays
+    for (auto num : nums)
+    {
+        buckets[num]++;
+    }
+
+    // we cant not create an output array
+    // as we have to sort it in-place without using extra memory => SC: O(1)
+    int j = 0;
+    for (int i = 0; i < 3; i++)
+    {
+        while (buckets[i] > 0)
+        {
+            nums[j] = i;
+            j++;
+            buckets[i]--;
+        }
+    }
 }
 
 int main()
