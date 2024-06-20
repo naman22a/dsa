@@ -95,7 +95,29 @@ int findDuplicate(vector<int> &arr)
 
 // Q5:
 // Leetcode 442: Find All Duplicates in an Array
+
+// TC: O(N)
+// SC: O(1)
 vector<int> findDuplicates(vector<int> &nums)
+{
+    // Trick: use -ve sign to mark a value visited
+    vector<int> result;
+
+    for (int i = 0; i < nums.size(); i++)
+    {
+        // check if already visited(is already -ve)
+        if (nums[abs(nums[i]) - 1] < 0)
+            result.push_back(abs(nums[i]));
+        else
+            nums[abs(nums[i]) - 1] *= -1;
+    }
+
+    return result;
+}
+
+// TC: O(N)
+// SC: O(N)
+vector<int> findDuplicates_brute_force(vector<int> &nums)
 {
     unordered_map<int, int> freq;
     vector<int> ans;
