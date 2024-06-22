@@ -23,3 +23,8 @@
 ## 0️⃣ 1️⃣ Binary Search
 
 12. Binary Search
+13. Binary Search Interview Questions - I
+    -   Find First and Last position of an element in sorted array
+    -   Find total number of occurences of k in a sorted array
+    -   Peak Index in a Mountain Array
+    -   Find Pivot Index
