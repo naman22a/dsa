@@ -31,3 +31,7 @@
     -   Find Pivot in an array
     -   Search in a rotated & Sorted array
     -   Square root using binary search
+15. Binary Search Interview Questions - III
+    -   Book Allocation Problem
+    -   Painter's Partition Problem
+    -   Aggressive Cows Problem
