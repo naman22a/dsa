@@ -27,4 +27,7 @@
     -   Find First and Last position of an element in sorted array
     -   Find total number of occurences of k in a sorted array
     -   Peak Index in a Mountain Array
-    -   Find Pivot Index
+14. Binary Search Interview Questions - II
+    -   Find Pivot in an array
+    -   Search in a rotated & Sorted array
+    -   Square root using binary search
