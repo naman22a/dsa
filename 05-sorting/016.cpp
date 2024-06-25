@@ -2,37 +2,38 @@
 using namespace std;
 
 void printArray(int arr[], int n);
-bool ascending(int a, int b) { return a < b; }
-bool descending(int a, int b) { return a > b; }
 
+// In-place sorting algorithm (no extra space/memory required)
 // Unstable Sorting Algorithm
 // TC: O(N^2)
 // SC: O(1)
-void selection_sort(int arr[], int n, bool (*comparator)(int, int))
+void selection_sort(int arr[], int n)
 {
     for (int i = 0; i <= n - 2; i++)
     {
         int mini = i;
         for (int j = i; j <= n - 1; j++)
         {
-            // if (arr[j] < arr[mini])
-            if (comparator(arr[j], arr[mini]))
+            if (arr[j] < arr[mini])
                 mini = j;
         }
 
         swap(arr[i], arr[mini]);
+
+        // print passes
+        printArray(arr, n);
     }
 }
 
 int main()
 {
-    int arr[] = {5, 4, 2, 3, 1};
+    int arr[] = {13, 46, 24, 52, 20, 9};
     int n = sizeof(arr) / sizeof(arr[0]);
 
     printArray(arr, n);
-    selection_sort(arr, n, &ascending);
-    printArray(arr, n);
-    selection_sort(arr, n, &descending);
+    cout << endl;
+    selection_sort(arr, n);
+    cout << endl;
     printArray(arr, n);
 
     return 0;
