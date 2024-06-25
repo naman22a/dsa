@@ -40,3 +40,4 @@
 
 16. Selection Sort
 17. Bubble Sort
+18. Insertion Sort
