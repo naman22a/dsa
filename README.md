@@ -39,3 +39,4 @@
 ## 📊 Sorting
 
 16. Selection Sort
+17. Bubble Sort
