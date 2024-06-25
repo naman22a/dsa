@@ -35,3 +35,7 @@
     -   Book Allocation Problem
     -   Painter's Partition Problem
     -   Aggressive Cows Problem
+
+## 📊 Sorting
+
+16. Selection Sort
