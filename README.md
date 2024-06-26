@@ -41,3 +41,7 @@
 16. Selection Sort
 17. Bubble Sort
 18. Insertion Sort
+
+## 💠 Standard Template Library
+
+19. Standard Template Library (STL)
