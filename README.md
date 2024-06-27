@@ -9,6 +9,9 @@
 5. Bitwise Operators, For Loops, Operator Precedence & Variable Scoping
 6. Binary & Decimal Number System
 7. LeetCode Problem Solving Session
+    - Reverse Integer
+    - Complement of Base 10 Integer
+    - Power of Two
 8. Switch Statement & Functions
 
 ## 📃 Arrays
