@@ -65,3 +65,6 @@
     -   Reverse the Array after m position
     -   Merge Sorted Array
     -   Move Zeroes
+21. Solving LeetCode/CodeStudio Questions on Arrays
+    -   Rotate Array
+    -   Check if Array Is Sorted and Rotated
