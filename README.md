@@ -15,6 +15,16 @@
 
 9. Introduction to Arrays
 10. Solving LeetCode/CodeStudio Questions on Arrays
+    - Swap alternate elements in an array
+    - Single Number
+    - Unique Number of Occurrences
+    - Duplicate in an array
+    - Find All Duplicates in an Array
+    - Array Intersection
+    - Two Sum
+    - Three Sum
+    - Sort 0 1
+    - Sort 0 1 2 / Sort Colors
 
 ## 🕐 Time and Space Complexity
 
@@ -49,3 +59,6 @@
 ## 📃 Array Questions
 
 20. Solving LeetCode/CodeStudio Questions on Arrays
+    -   Reverse the Array after m position
+    -   Merge Sorted Array
+    -   Move Zeroes
