@@ -105,9 +105,9 @@ vector<int> findArraySum(vector<int> &a, int n, vector<int> &b, int m)
 
         int sum = x + y + carry;
         carry = sum / 10;
-        sum = sum % 10;
+        int digit = sum % 10;
 
-        ans.push_back(sum);
+        ans.push_back(digit);
 
         i--;
         j--;
@@ -118,9 +118,9 @@ vector<int> findArraySum(vector<int> &a, int n, vector<int> &b, int m)
     {
         int sum = a[i] + carry;
         carry = sum / 10;
-        sum = sum % 10;
+        int digit = sum % 10;
 
-        ans.push_back(sum);
+        ans.push_back(digit);
 
         i--;
     }
@@ -130,9 +130,9 @@ vector<int> findArraySum(vector<int> &a, int n, vector<int> &b, int m)
     {
         int sum = b[j] + carry;
         carry = sum / 10;
-        sum = sum % 10;
+        int digit = sum % 10;
 
-        ans.push_back(sum);
+        ans.push_back(digit);
 
         j--;
     }
@@ -142,8 +142,8 @@ vector<int> findArraySum(vector<int> &a, int n, vector<int> &b, int m)
     {
         int sum = carry;
         carry = sum / 10;
-        sum = sum % 10;
-        ans.push_back(sum);
+        int digit = sum % 10;
+        ans.push_back(digit);
     }
 
     // because we a pushing elements at the start of the ans array
