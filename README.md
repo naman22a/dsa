@@ -70,3 +70,14 @@
     -   Check if Array Is Sorted and Rotated
     -   Sum Of Two Arrays
 22. All about Char Arrays, Strings & solving LeetCode Questions
+    -   Length of string
+    -   Reverse a String
+    -   Check if a string is a palindrome
+    -   Valid Palindrome
+    -   Reverse Words in a String II
+    -   Maximum Occuring Character in a String
+    -   Replace spaces
+    -   Remove All Occurrences of a Substring
+    -   Permutation in String
+    -   Remove All Adjacent Duplicates In String
+    -   String Compression
