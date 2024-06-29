@@ -81,3 +81,9 @@
     -   Permutation in String
     -   Remove All Adjacent Duplicates In String
     -   String Compression
+23. Introduction to 2D Arrays
+    -   Wave Pattern
+    -   Spiral Matrix
+    -   Rotate Image
+    -   Search a 2D Matrix
+    -   Search a 2D Matrix II
