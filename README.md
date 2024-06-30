@@ -87,3 +87,7 @@
     -   Rotate Image
     -   Search a 2D Matrix
     -   Search a 2D Matrix II
+24. Basic Maths for DSA || Sieve || Modular Arithmetics || Euclid’s Algorithm
+    -   Count Primes
+    -   GCD / HCF
+    -   Fast Exponentiation / Modular Exponentiation
