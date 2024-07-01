@@ -91,3 +91,13 @@
     -   Count Primes
     -   GCD / HCF
     -   Fast Exponentiation / Modular Exponentiation
+
+## ✒️ Pointers
+
+25. Pointers
+    -   Basics
+    -   Wild Pointer
+    -   NULL Pointer
+    -   Dangling Pointer
+    -   Void Pointer
+    -   Pointer Arithmetic
