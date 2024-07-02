@@ -102,3 +102,4 @@
     -   Void Pointer
     -   Pointer Arithmetic
 26. Pointers with Arrays and Call by Reference
+27. Double Pointers / Pointer to Pointer
