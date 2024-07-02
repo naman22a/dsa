@@ -101,3 +101,4 @@
     -   Dangling Pointer
     -   Void Pointer
     -   Pointer Arithmetic
+26. Pointers with Arrays and Call by Reference
