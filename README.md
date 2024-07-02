@@ -105,3 +105,7 @@
 27. Double Pointers / Pointer to Pointer
 28. Reference Variable | Static vs Dynamic Memory | Dynamic Memory Allocation
 29. Dynamic Memory Allocation of 2D Arrays
+
+## ❓ Misc
+
+30. Macros, Constant Variables, Global Variables, Inline Functions & Default Arguments
