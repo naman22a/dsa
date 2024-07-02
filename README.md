@@ -103,3 +103,4 @@
     -   Pointer Arithmetic
 26. Pointers with Arrays and Call by Reference
 27. Double Pointers / Pointer to Pointer
+28. Reference Variable | Static vs Dynamic Memory | Dynamic Memory Allocation
