@@ -113,6 +113,21 @@
 ## 🔃 Recursion
 
 31. Recursion
+    -   Factorial
+    -   Power of Two
+    -   Counting
+    -   Reverse counting
 32. Recursion Questions
+    -   Fibonacci Number
+    -   Climbing Stairs
+    -   Say Digits
 33. Recursion and Binary Search
+    -   Array is sorted ?
+    -   Sum of elements in an Array
+    -   Linear Search
+    -   Binary Search
 34. Recursion with Strings
+    -   Reverse a string
+    -   Check Palindrome
+    -   Fast Exponentiation
+    -   Recursive Bubble sort
