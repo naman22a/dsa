@@ -131,3 +131,4 @@
     -   Check Palindrome
     -   Fast Exponentiation
     -   Recursive Bubble sort
+35. Merge Sort
