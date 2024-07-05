@@ -53,6 +53,8 @@ void mS(int arr[], int left, int right)
     mergeArrays(arr, left, mid, right);
 }
 
+// Not In-place sorting algorithm
+// Stable Sorting Algorithm
 // TC: O(N.log(N))
 // SC: O(N), temp array in mergeArrays function
 void mergeSort(int arr[], int size)

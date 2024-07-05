@@ -132,3 +132,4 @@
     -   Fast Exponentiation
     -   Recursive Bubble sort
 35. Merge Sort
+36. Quick Sort
