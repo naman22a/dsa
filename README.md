@@ -142,3 +142,18 @@
 ## 🤖 Object Oriented Programming System
 
 42. Object Oriented Programming Systems(OOPS) Concepts
+    -   Classes and Objects
+    -   Empty Class
+    -   Access Modifiers
+    -   Getters and Setters
+    -   Static and Dynamic Memory Allocation of Objects
+    -   Constructor
+    -   Default Constructor
+    -   Parameterized Constructor
+    -   this Keyword
+    -   Copy Constructor
+    -   Shallow and Deep Copy
+    -   Copy Assignment Operator
+    -   Destructor
+    -   Static Keyword
+    -   Static Functions
