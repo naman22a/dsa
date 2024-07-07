@@ -110,7 +110,7 @@
 
 30. Macros, Constant Variables, Global Variables, Inline Functions & Default Arguments
 
-## 🔃 Recursion
+## 🔃 Recursion and Backtracking
 
 31. Recursion
     -   Factorial
