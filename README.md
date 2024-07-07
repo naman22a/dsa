@@ -138,3 +138,7 @@
 39. Permutations
 40. Rat in a Maze Problem
 41. Time & Space Complexity of Recursive Algorithms
+
+## 🤖 Object Oriented Programming System
+
+42. Object Oriented Programming Systems(OOPS) Concepts
