@@ -157,3 +157,18 @@
     -   Destructor
     -   Static Keyword
     -   Static Functions
+43. 4 Pillars of OOPs Concept - Encapsulation, Inheritance, Polymorphism, Abstraction
+    -   Encapsulation
+    -   Inheritance
+    -   Types of Inheritance
+        -   Single Inheritance
+        -   Multilevel Inheritance
+        -   Multiple Inheritance
+        -   Hierarchical Inheritance
+        -   Hybrid Inheritance
+    -   Polymorphism
+        -   Compile time Polymorphism
+            -   Function overloading
+            -   Operator overloading
+        -   Runtime Polymorphism
+    -   Abstraction
