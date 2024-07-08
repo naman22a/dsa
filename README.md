@@ -172,3 +172,8 @@
             -   Operator overloading
         -   Runtime Polymorphism
     -   Abstraction
+
+## 📃 Array and Dynamic Array ADT (Abstract Data Type) (extra)
+
+-   Array
+-   Dynamic Array / Vector
