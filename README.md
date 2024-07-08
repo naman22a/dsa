@@ -87,6 +87,9 @@
     -   Rotate Image
     -   Search a 2D Matrix
     -   Search a 2D Matrix II
+
+## 🧮 Maths
+
 24. Basic Maths for DSA || Sieve || Modular Arithmetics || Euclid’s Algorithm
     -   Count Primes
     -   GCD / HCF
