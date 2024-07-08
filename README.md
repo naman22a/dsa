@@ -180,3 +180,7 @@
 
 -   Array
 -   Dynamic Array / Vector
+
+## 🔗 Linked List
+
+44. Linked List & its types - Singly, Doubly, Circular
