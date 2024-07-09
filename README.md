@@ -184,3 +184,6 @@
 ## 🔗 Linked List
 
 44. Linked List & its types - Singly, Doubly, Circular
+45. Linked List Questions
+    -   Reverse Linked List
+    -   Find Middle of Linked List
