@@ -63,6 +63,8 @@ ListNode *detectCycle(ListNode *head)
 }
 
 // Q3: Remove Cycle from Linked List
+// TC: O(N)
+// SC: O(1)
 void removeLoop(ListNode *head)
 {
     // edge case
