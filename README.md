@@ -187,3 +187,6 @@
 45. Linked List Questions
     -   Reverse Linked List
     -   Find Middle of Linked List
+46. Linked List Questions
+    -   Reverse Nodes in k-Group
+    -   Linked List Cycle
