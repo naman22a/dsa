@@ -191,4 +191,6 @@
     -   Reverse Nodes in k-Group
     -   Linked List Cycle
 47. Detect & Remove Loop in Linked List
-    -   Linked List Cycle II
+    -   Detect Cycle in Linked List / Linked List Cycle
+    -   Starting Node of loop in Linked List / Linked List Cycle II
+    -   Remove Cycle from Linked List
