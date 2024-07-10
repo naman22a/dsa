@@ -190,7 +190,10 @@
 46. Linked List Questions
     -   Reverse Nodes in k-Group
     -   Linked List Cycle
-47. Detect & Remove Loop in Linked List
+47. Linked List Questions
     -   Detect Cycle in Linked List / Linked List Cycle
     -   Starting Node of loop in Linked List / Linked List Cycle II
     -   Remove Cycle from Linked List
+48. Linked List Questions
+    -   Remove Duplicates from Sorted List
+    -   Remove Duplicates from an Unsorted List
