@@ -190,3 +190,5 @@
 46. Linked List Questions
     -   Reverse Nodes in k-Group
     -   Linked List Cycle
+47. Detect & Remove Loop in Linked List
+    -   Linked List Cycle II
