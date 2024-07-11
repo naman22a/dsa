@@ -197,3 +197,6 @@
 48. Linked List Questions
     -   Remove Duplicates from Sorted List
     -   Remove Duplicates from an Unsorted List
+49. Linked List Questions
+    -   Sort 0s, 1s and 2s in Linked List
+    -   Merge Two Sorted Lists
