@@ -148,6 +148,70 @@ ListNode *mergeTwoLists(ListNode *list1, ListNode *list2)
     return dummy->next;
 }
 
+// (extra)
+// Q3:
+// Leetcode 23: Merge k Sorted Lists
+
+// helper: merge two sorted lists
+ListNode *merge(ListNode *one, ListNode *two)
+{
+    ListNode *dummy = new ListNode;
+    ListNode *tail = dummy;
+
+    while (one != NULL && two != NULL)
+    {
+        if (one->val <= two->val)
+        {
+            tail->next = one;
+            one = one->next;
+        }
+        else
+        {
+            tail->next = two;
+            two = two->next;
+        }
+        tail = tail->next;
+    }
+
+    if (one != NULL)
+        tail->next = one;
+
+    if (two != NULL)
+        tail->next = two;
+
+    return dummy->next;
+}
+
+// TC: O(n x log(k))
+// SC: O(n)
+ListNode *mergeKLists(vector<ListNode *> &lists)
+{
+    // split them(linked lists) into pairs of two then sort them and merge them back
+    // kind of like merge sort algorithm
+    // O(log(k))
+    // merging => O(n)
+    // so time complexity is O(n x log(k))
+
+    // edge case: "lists" is empty
+    if (lists.size() == 0)
+        return NULL;
+
+    while (lists.size() > 1)
+    {
+        vector<ListNode *> mergedLists;
+
+        for (int i = 0; i < lists.size(); i += 2)
+        {
+            ListNode *l1 = lists[i];
+            ListNode *l2 = (i + 1) < lists.size() ? lists[i + 1] : NULL;
+            mergedLists.push_back(merge(l1, l2));
+        }
+        lists = mergedLists;
+    }
+
+    return lists[0];
+};
+
 int main()
 {
 
