@@ -210,3 +210,18 @@
 53. Linked List Questions
     -   Merge Sort in Linked List / Sort List
     -   Flatten a Linked List
+
+## 📚 Stack
+
+54. Introduction to Stacks
+    -   Operations on Stack
+        -   push
+        -   pop
+        -   isEmpty
+        -   isFull
+        -   stackTop
+        -   stackBottom
+        -   peek
+    -   Stack using Array
+    -   Stack using Linked List
+    -   2 Stacks in an Array
