@@ -225,3 +225,12 @@
     -   Stack using Array
     -   Stack using Linked List
     -   2 Stacks in an Array
+55. Stack Interview Questions
+    -   Reverse a string using Stack
+    -   Delete Middle element from Stack
+    -   Valid Parentheses
+    -   Insert an Element at the Bottom of a Stack
+    -   Reverse a Stack using Recursion
+    -   Sort a Stack
+    -   Redundant Brackets
+    -   Count the Reversals / Minimum Cost To Make String Valid
