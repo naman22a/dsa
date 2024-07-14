@@ -234,3 +234,6 @@
     -   Sort a Stack
     -   Redundant Brackets
     -   Count the Reversals / Minimum Cost To Make String Valid
+56. Stack Interview Questions
+    -   Next Smaller Element
+    -   Largest Rectangle in Histogram
