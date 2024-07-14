@@ -299,6 +299,8 @@ int countRev(string s)
     return count;
 }
 
+// TODO: prefix, infix, postfix conversions
+
 int main()
 {
     // Reverse a string using stack
