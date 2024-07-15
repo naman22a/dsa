@@ -242,3 +242,5 @@
     -   Max Rectangle in Binary Matrix with all 1's
 58. Stack Interview Questions
     -   N Stacks in an Array / k Stacks in an Array
+59. Stack Interview Questions
+    -   Min Stack
