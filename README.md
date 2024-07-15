@@ -237,3 +237,6 @@
 56. Stack Interview Questions
     -   Next Smaller Element
     -   Largest Rectangle in Histogram
+57. Stack Interview Questions
+    -   Celebrity Problem
+    -   Max Rectangle in Binary Matrix with all 1's
