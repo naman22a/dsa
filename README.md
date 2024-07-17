@@ -252,3 +252,12 @@
     -   Circular Queue
     -   Queue using Linked List
     -   Double Ended Queue / Deque
+61. Queue Interview Questions
+    -   Queue Reversal
+    -   First negative in every window of size k
+    -   Reverse First K elements of Queue
+    -   First non-repeating character in a stream
+    -   Circular tour
+    -   Interleave the first half of the queue with second half
+    -   K Queues in an Array
+    -   Sum of minimum and maximum elements of all subarrays of size k.
