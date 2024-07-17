@@ -353,6 +353,8 @@ public:
 };
 
 // Q8: Sum of minimum and maximum elements of all subarrays of size k.
+// TC: O(N)
+// SC: O(N)
 int sum(int arr[], int n, int k)
 {
     // Monotonic Queue
