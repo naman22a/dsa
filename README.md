@@ -248,3 +248,7 @@
 ## 🏠 🚶‍♂️🚶‍♂️ Queue
 
 60. Introduction to Queues & Types of Queues
+    -   Queue using Array
+    -   Circular Queue
+    -   Queue using Linked List
+    -   Double Ended Queue / Deque
