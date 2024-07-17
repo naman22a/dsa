@@ -244,3 +244,7 @@
     -   N Stacks in an Array / k Stacks in an Array
 59. Stack Interview Questions
     -   Min Stack
+
+## 🏠 🚶‍♂️🚶‍♂️ Queue
+
+60. Introduction to Queues & Types of Queues
