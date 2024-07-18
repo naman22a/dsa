@@ -261,3 +261,17 @@
     -   Interleave the first half of the queue with second half
     -   K Queues in an Array
     -   Sum of minimum and maximum elements of all subarrays of size k.
+
+## 🌳 Binary Tree
+
+62. Binary Trees & its Representation | Different types of Traversals
+    -   Binary Tree Representation
+    -   Creation / Building a Binary Tree
+    -   Binary Tree Traversals
+    -   Depth First Search(DFS)
+        -   Preorder (recursive and iterative)
+        -   Inorder (recursive and iterative)
+        -   Postorder (recursive and iterative)
+    -   Breadth first search(BFS) / Level Order Traversal
+    -   Create Tree from Level Order Traversal
+    -   Count Leaves in Binary Tree
