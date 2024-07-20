@@ -275,3 +275,9 @@
     -   Breadth first search(BFS) / Level Order Traversal
     -   Create Tree from Level Order Traversal
     -   Count Leaves in Binary Tree
+63. Binary Tree FAANG Interview Questions
+    -   Height of a Binary Tree / Maximum Depth of Binary Tree
+    -   Diameter of Binary Tree
+    -   Balanced Binary Tree
+    -   Same Tree / Identical Trees
+    -   Sum Tree
