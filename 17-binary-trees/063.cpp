@@ -229,6 +229,8 @@ An empty tree is also a Sum Tree as the sum of an empty tree can be considered t
 */
 pair<bool, int> isSumTree_dfs(Node *root);
 
+// TC: O(N)
+// SC: O(H)
 bool isSumTree(Node *root)
 {
     return isSumTree_dfs(root).first;
