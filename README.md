@@ -283,3 +283,10 @@
     -   Sum Tree
 64. Binary Tree Interview Questions
     -   Binary Tree Zigzag Level Order Traversal
+    -   Boundary Traversal of Binary Tree / Boundary of Binary Tree
+    -   Vertical Order Traversal of a Binary Tree
+    -   Top View of Binary Tree
+    -   Bottom View of Binary Tree
+    -   Left View of Binary Tree
+    -   Right View of Binary Tree
+    -   Diagonal Traversal of Binary Tree
