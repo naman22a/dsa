@@ -299,3 +299,5 @@
 66. Binary Tree Interview Questions
     -   Construct Binary Tree from Preorder and Inorder Traversal
     -   Construct Binary Tree from Inorder and Postorder Traversal
+67. Binary Tree Interview Questions
+    -   Minimum time taken to BURN the Binary Tree from a Node
