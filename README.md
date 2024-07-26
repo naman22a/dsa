@@ -304,4 +304,8 @@
 
 ## 🌲 Binary Search Tree
 
-69. Binary Search Tree & its Implementation || Insertion, Deletion & Searching a Node
+69. Binary Search Tree & its Implementation
+    -   Search
+    -   Insert
+    -   Delete
+    -   Min / Max
