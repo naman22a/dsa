@@ -301,3 +301,7 @@
     -   Construct Binary Tree from Inorder and Postorder Traversal
 67. Minimum time taken to BURN the Binary Tree from a Node
 68. Morris Traversal | Flatten Binary Tree to Linked List
+
+## 🌲 Binary Search Tree
+
+69. Binary Search Tree & its Implementation || Insertion, Deletion & Searching a Node
