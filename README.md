@@ -309,8 +309,13 @@
     -   Insert
     -   Delete
     -   Min / Max
-70. Binary SearchTree Interview Questions
+70. Binary Search Tree Interview Questions
     -   Validate Binary Search Tree
     -   Kth Smallest/Largest Element in a BST
     -   Inorder Successor/Predecessor in BST
     -   Lowest Common Ancestor of a Binary Search Tree / LCA in BST
+71. Binary Search Tree Interview Questions
+    -   Two Sum in BST / Two Sum IV - Input is a BST
+    -   Flatten BST To A Sorted List / Flatten Binary Tree to Linked List(same)
+    -   Balance a Binary Search Tree
+    -   Construct Binary Search Tree from Preorder Traversal
