@@ -309,3 +309,8 @@
     -   Insert
     -   Delete
     -   Min / Max
+70. Binary SearchTree Interview Questions
+    -   Validate Binary Search Tree
+    -   Kth Smallest/Largest Element in a BST
+    -   Inorder Successor/Predecessor in BST
+    -   Lowest Common Ancestor of a Binary Search Tree / LCA in BST
