@@ -34,7 +34,7 @@ Node *merge(Node *root1, Node *root2)
 
 // Brute Force
 // TC: O(N + M)
-// SC: O(N + M)
+// SC: O(log(N) + log(M)), assuiming balanced BST
 
 // 1. store BST inorder traversal for both BST's in 2 arrays
 // 2. Merge 2 sorted arrays
