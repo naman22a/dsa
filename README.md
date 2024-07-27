@@ -319,3 +319,4 @@
     -   Flatten BST To A Sorted List / Flatten Binary Tree to Linked List(same)
     -   Balance a Binary Search Tree
     -   Construct Binary Search Tree from Preorder Traversal
+72. Merge 2 BSTs(Binary Search Trees)
