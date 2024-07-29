@@ -315,6 +315,7 @@
     -   Inorder Successor/Predecessor in BST
     -   Lowest Common Ancestor of a Binary Search Tree / LCA in BST
 71. Binary Search Tree Interview Questions
+    -   Binary Search Tree Iterator
     -   Two Sum in BST / Two Sum IV - Input is a BST
     -   Flatten BST To A Sorted List / Flatten Binary Tree to Linked List(same)
     -   Balance a Binary Search Tree

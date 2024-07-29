@@ -1,4 +1,5 @@
 #include <iostream>
+#include <climits>
 using namespace std;
 
 struct Node
@@ -15,40 +16,41 @@ struct Node
 };
 
 // Q1: Largest BST in a Binary Tree
-class NodeValue
+struct Triplet
 {
-public:
-    int maxNode, minNode, maxSize;
+    int size;
+    int largest;
+    int smallest;
 
-    NodeValue(int minNode, int maxNode, int maxSize) : minNode(minNode), maxNode(maxNode), maxSize(maxSize) {}
+    Triplet(int size, int largest, int smallest) : size(size), largest(largest), smallest(smallest) {}
 };
-NodeValue largestBSTSubTreeHelper(Node *root);
+Triplet dfs(Node *root);
 
 // TC: O(N)
 // SC: O(H)
 int largestBst(Node *root)
 {
     // post order traversal -> Left Right Root
-    return largestBSTSubTreeHelper(root).maxSize;
+    return dfs(root).size;
 }
 
-NodeValue largestBSTSubTreeHelper(Node *root)
+Triplet dfs(Node *root)
 {
     // an empty tree is bst of size zero
     if (root == NULL)
-        return NodeValue(INT_MAX, INT_MIN, 0);
+        return Triplet(0, INT_MIN, INT_MAX);
 
     // get values from left and right subtree of current tree
-    NodeValue left = largestBSTSubTreeHelper(root->left);
-    NodeValue right = largestBSTSubTreeHelper(root->right);
+    Triplet left = dfs(root->left);
+    Triplet right = dfs(root->right);
 
     // condition for valid BST
     // current node is greater than max in left and smaller than min in right, it is a BST
-    if (left.maxNode < root->data && root->data < right.minNode)
-        return NodeValue(min(root->data, left.minNode), max(root->data, right.maxNode), left.maxSize + right.maxSize + 1);
+    if (left.largest < root->data && root->data < right.smallest)
+        return Triplet(1 + left.size + right.size, max(root->data, right.largest), min(root->data, left.smallest));
 
     // otherwise return large number, so it can't be a valid BST
-    return NodeValue(INT_MIN, INT_MAX, max(left.maxSize, right.maxSize));
+    return Triplet(max(left.size, right.size), INT_MAX, INT_MIN);
 }
 
 int main()

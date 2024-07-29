@@ -18,12 +18,11 @@ struct Node
 
 // Q1: Merge 2 BSTs
 
-// TODO
 // Optimized
 // TC: O(N + M)
 // SC: O(log(N) + log(M)) or O(H1 + H2)
 
-// 1. Flatten both BSTs to Sorted Linked Lists
+// 1. Flatten both BSTs to Sorted Linked Lists(could also use Doubly Linked Lists(DLLs))
 // 2. Merge 2 sorted Linked Lists
 // 3. Sorted Linked list -> Balanced BST
 //      - for this step ensure that Space Complexity should not exceed O(H1 + H2)
@@ -32,7 +31,8 @@ Node *merge(Node *root1, Node *root2)
 {
 }
 
-// Brute Force
+// Brute Force Optimized(as i am using BST iterator to reduce space complexity)
+// it has the same time and space complexity as optimized solution above
 // TC: O(N + M)
 // SC: O(log(N) + log(M)), assuiming balanced BST
 
