@@ -3,16 +3,12 @@
 #include <deque>
 using namespace std;
 
-// TODO: update this accordingly for Array and Circular Queue Implementation
-// TODO: Implement Stack using Queue, Queue using Stack ... do these types of questions
-// see this for different implementation of Queue
-// https://github.com/naman22a/dsa-cwh/tree/main/4-Queue
-
+// Queue using Arrays
 class Queue_using_Array
 {
 private:
-    int *arr;
     int size;
+    int *arr;
     int front;
     int rear;
 
@@ -21,8 +17,8 @@ public:
     {
         this->size = size;
         arr = new int[size];
-        front = 0;
-        rear = 0;
+        front = -1;
+        rear = -1;
     }
 
     ~Queue_using_Array()
@@ -32,15 +28,9 @@ public:
 
     void print()
     {
-        cout << "---" << endl;
-        for (int i = front; i <= rear - 1; i++)
-            cout << arr[i] << endl;
-        cout << "---" << endl;
-    }
-
-    bool isFull()
-    {
-        return rear == size;
+        for (int i = front + 1; i <= rear; i++)
+            cout << arr[i] << " ";
+        cout << endl;
     }
 
     bool isEmpty()
@@ -48,59 +38,73 @@ public:
         return front == rear;
     }
 
+    bool isFull()
+    {
+        return rear == size - 1;
+    }
+
     void enqueue(int value)
     {
         if (isFull())
+            cout << "Queue overflow error" << endl;
+        else
         {
-            cout << "Queue is Full" << endl;
-            return;
+            rear++;
+            arr[rear] = value;
         }
-
-        arr[rear] = value;
-        rear++;
     }
 
-    void dequeue()
+    int dequeue()
     {
+        int value = -1;
         if (isEmpty())
+            cout << "Queue underflow error" << endl;
+        else
         {
-            cout << "Queue is empty" << endl;
-            return;
+            front++;
+            value = arr[front];
         }
 
-        // arr[front] = -1; // -1 denotes empty location // no need for this line actually
-        front++;
-        if (isEmpty())
-        {
-            front = 0;
-            rear = 0;
-        }
+        return value;
     }
 
     int first()
     {
         if (isEmpty())
             return -1;
-        return arr[front];
+        return arr[front + 1];
     }
 
     int last()
     {
         if (isEmpty())
             return -1;
-        return arr[rear - 1];
+        return arr[rear];
+    }
+
+    int peek(int position)
+    {
+        // check if queue is empty
+        // check if position is out of bounds -> range -> [f + 1, r]
+        if (isEmpty() || !(position >= front + 1 && position <= rear))
+            return -1;
+
+        return arr[front + position];
     }
 };
 
+// Circular Queue
+// manages space efficiently
 class CircularQueue
 {
-    int *arr;
+private:
     int size;
+    int *arr;
     int front;
     int rear;
 
 public:
-    CircularQueue(int size = 10)
+    CircularQueue(int size = 5)
     {
         this->size = size;
         arr = new int[size];
@@ -113,96 +117,120 @@ public:
         delete[] arr;
     }
 
+    void print()
+    {
+        if (isEmpty())
+        {
+            cout << "Queue is empty" << endl;
+            return;
+        }
+        int i = front;
+        while (true)
+        {
+            cout << arr[i] << " ";
+            if (i == rear)
+                break;
+            i = (i + 1) % size;
+        }
+        cout << endl;
+    }
+
     bool isFull()
     {
-        return (front == 0 && rear == size - 1) || (rear == (front - 1) % (size - 1));
+        return (rear + 1) % size == front;
     }
 
     bool isEmpty()
     {
-        return (front == -1);
+        return front == rear;
     }
 
     void enqueue(int value)
     {
         if (isFull())
-            cout << "Queue is full" << endl;
-        // push first element
-        else if (front == -1)
-            front = rear = 0;
-        // to maintain cyclic nature
-        else if (rear == size - 1 && front != 0)
-            rear = 0;
-        // normal flow
+            cout << "Queue overflow error" << endl;
         else
-            rear++;
-        arr[rear] = value;
+        {
+            rear = (rear + 1) % size;
+            arr[rear] = value;
+        }
     }
 
-    void dequeue()
+    int dequeue()
     {
+        int value = -1;
+
         if (isEmpty())
-            cout << "Queue is empty" << endl;
-        // single element is present
-        else if (front == rear)
-            front = rear = -1;
-        // to maintain cyclic nature
-        else if (front == size - 1)
-            front = 0;
-        // normal flow
+            cout << "Queue underflow error" << endl;
         else
-            front++;
+        {
+            front = (front + 1) % size;
+            value = arr[front];
+        }
+
+        return value;
     }
 };
 
 // Queue using Linked List
+
 class Node
 {
 public:
     int data;
     Node *next;
-
-    Node(int data, Node *next) : data(data), next(next) {}
 };
-
-// Queue using Linked List
 
 class Queue_using_Linked_List
 {
-    Node *front = NULL;
-    Node *rear = NULL;
+    Node *front;
+    Node *rear;
 
 public:
+    Queue_using_Linked_List()
+    {
+        front = NULL;
+        rear = NULL;
+    }
+
+    bool isFull()
+    {
+        Node *newNode = (Node *)malloc(sizeof(Node));
+        return newNode == NULL;
+    }
+
     bool isEmpty()
     {
         return front == NULL;
     }
 
-    void show()
+    void print()
     {
-        if (isEmpty())
-            cout << "Queue is Empty" << endl;
-        else
+        Node *cur = front;
+
+        while (cur != NULL)
         {
-            Node *p = front;
-            while (p != NULL)
-            {
-                cout << p->data << " ";
-                p = p->next;
-            }
-            cout << endl;
+            cout << cur->data << " ";
+            cur = cur->next;
         }
+        cout << endl;
     }
 
-    void enqueue(int data)
+    void enqueue(int value)
     {
-        Node *newNode = new Node(data, NULL);
-        if (newNode == NULL)
-            cout << "Queue is Full" << endl;
+        if (isFull())
+            cout << "Queue overflow error" << endl;
         else
         {
+            Node *newNode = new Node;
+            newNode->data = value;
+            newNode->next = NULL;
+
             if (isEmpty())
-                front = rear = newNode;
+            {
+                front = newNode;
+                rear = newNode;
+            }
             else
             {
                 rear->next = newNode;
@@ -213,23 +241,22 @@ public:
 
     int dequeue()
     {
+        int value = -1;
         if (isEmpty())
-        {
-            cout << "Queue is Empty" << endl;
-            return -1;
-        }
+            cout << "Queue underflow error" << endl;
+
         else
         {
-            Node *ptr = front;
+            Node *temp = front;
             front = front->next;
-            int value = ptr->data;
-            delete ptr;
-            return value;
+            value = temp->data;
+            free(temp);
         }
+        return value;
     }
 };
 
-// Double ended Queue / Deque
+// Double Ended Queue / DEque
 // insertion and deletion from both ends
 
 class DEQueue
@@ -327,7 +354,6 @@ public:
 
 int main()
 {
-
     // Queue using STL
     {
         queue<int> q;
@@ -349,7 +375,7 @@ int main()
 
     // Queue using Array
     {
-        Queue_using_Array q;
+        Queue_using_Array q(5);
         q.enqueue(10);
         q.enqueue(20);
         q.enqueue(30);
@@ -364,6 +390,44 @@ int main()
         cout << "first: " << q.first() << endl;
         cout << "last: " << q.last() << endl;
 
+        q.enqueue(40);
+        q.enqueue(50);
+        // q.enqueue(60); // overflow error
+        q.print();
+        cout << "full: " << q.isFull() << endl;
+
+        cout << "Peek(0): " << q.peek(0) << endl;
+        cout << "Peek(1): " << q.peek(1) << endl;
+        cout << "Peek(2): " << q.peek(2) << endl;
+        cout << "Peek(3): " << q.peek(3) << endl;
+        cout << "Peek(4): " << q.peek(4) << endl;
+        cout << "Peek(5): " << q.peek(5) << endl; // invalid index, out of bounds, returns -1
+        cout << "Peek(100): " << q.peek(100) << endl;
+
+        cout << endl;
+    }
+
+    // Circular Queue
+    {
+        CircularQueue q(5);
+        q.enqueue(1);
+        q.enqueue(2);
+        q.enqueue(3);
+
+        q.print();
+
+        q.dequeue();
+        q.dequeue();
+
+        q.print();
+
+        q.enqueue(4);
+        q.enqueue(5);
+        q.enqueue(6);
+        // q.enqueue(7); // queue overflow error
+
+        q.print();
+
         cout << endl;
     }
 
@@ -375,11 +439,14 @@ int main()
         queue.enqueue(22);
         queue.enqueue(1);
 
-        queue.show();
+        queue.print();
 
         queue.dequeue();
+        // queue.dequeue();
+        // queue.dequeue();
+        // queue.dequeue(); // underflow error
 
-        queue.show();
+        queue.print();
         cout << endl;
     }
 
@@ -414,7 +481,7 @@ int main()
         cout << endl;
     }
 
-    // Double ended Queue
+    // Double Ended Queue
     {
         DEQueue queue(10);
 

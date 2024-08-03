@@ -251,7 +251,7 @@
     -   Queue using Array
     -   Circular Queue
     -   Queue using Linked List
-    -   Double Ended Queue / Deque
+    -   Double Ended Queue / DEque
 61. Queue Interview Questions
     -   Queue Reversal
     -   First negative in every window of size k
