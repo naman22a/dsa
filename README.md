@@ -262,6 +262,12 @@
     -   K Queues in an Array
     -   Sum of minimum and maximum elements of all subarrays of size k.
 
+-   Stacks and Queues
+    -   Implement Stack using 2 Queues
+    -   Implement Stack using 1 Queue
+    -   Implement Queue using Stacks (pop optimized)
+    -   Implement Queue using Stacks (push optimized)
+
 ## 🌳 Binary Tree
 
 62. Binary Trees & its Representation | Different types of Traversals
