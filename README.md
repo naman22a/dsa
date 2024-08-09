@@ -245,6 +245,15 @@
 59. Stack Interview Questions
     -   Min Stack
 
+-   Prefix, Infix, Postfix Conversions
+    -   Infix to Postfix
+    -   Infix to Prefix
+    -   Postfix to Infix
+    -   Prefix to Infix
+    -   Postfix to Prefix
+    -   Prefix to Postfix
+    -   Evaluate Reverse Polish Notation / Evaluation of Postfix expression
+
 ## 🏠 🚶‍♂️🚶‍♂️ Queue
 
 60. Introduction to Queues & Types of Queues
