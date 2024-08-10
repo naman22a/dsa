@@ -124,6 +124,8 @@
     -   Fibonacci Number
     -   Climbing Stairs
     -   Say Digits
+    -   Print Fibonacci Series
+    -   Tower of Hanoi
 33. Recursion and Binary Search
     -   Array is sorted ?
     -   Sum of elements in an Array

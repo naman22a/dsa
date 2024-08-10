@@ -89,8 +89,57 @@ void sayDigits(int n)
 }
 
 // Extra Questions
-// TODO: Print Fibonacci
-// TODO: Tower of Hanoi
+
+// Q4: Print Fibonacci Series
+void fib_recursive(int n)
+{
+    static int first = 0, second = 1, next;
+
+    if (n > 0)
+    {
+        next = first + second;
+        cout << next << " ";
+        first = second;
+        second = next;
+
+        fib_recursive(n - 1);
+    }
+
+    cout << endl;
+}
+
+void fib_series(int n)
+{
+    if (n == 0)
+        return;
+    if (n == 1)
+    {
+        cout << 0 << endl;
+        return;
+    }
+
+    if (n == 2)
+    {
+        cout << 0 << " " << 1 << endl;
+        return;
+    }
+
+    cout << 0 << " " << 1 << " ";
+    fib_recursive(n - 2);
+}
+
+// Q5: Tower of Hanoi
+void hanoi(int n, char src, char dest, char aux)
+{
+    if (n == 1)
+    {
+        cout << "Move 1 disk from " << src << " to " << dest << endl;
+        return;
+    }
+    hanoi(n - 1, src, aux, dest);
+    cout << "Move " << n << " disks from " << src << " to " << dest << endl;
+    hanoi(n - 1, aux, dest, src);
+}
 
 int main()
 {
@@ -100,6 +149,17 @@ int main()
         cout << endl;
 
         cout << endl;
+    }
+
+    {
+        int n = 5;
+        fib_series(n);
+        cout << endl;
+    }
+
+    {
+        int n = 3;
+        hanoi(n, 'A', 'C', 'B');
     }
 
     return 0;
