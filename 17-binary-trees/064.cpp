@@ -372,6 +372,34 @@ void dfs(TreeNode *node, int level, vector<int> &result)
 
 // TODO
 // Q7: Diagonal Traversal of Binary Tree
+// TC: O(N)
+// SC: O(N)
+vector<int> diagonal(Node *root)
+{
+    if (root == NULL)
+        return {};
+
+    vector<int> result;
+    queue<Node *> q;
+
+    q.push(root);
+
+    while (!q.empty())
+    {
+        Node *cur = q.front();
+        q.pop();
+
+        while (cur)
+        {
+            if (cur->left)
+                q.push(cur->left);
+            result.push_back(cur->data);
+            cur = cur->right;
+        }
+    }
+
+    return result;
+}
 
 int main()
 {
