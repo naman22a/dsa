@@ -370,7 +370,6 @@ void dfs(TreeNode *node, int level, vector<int> &result)
     dfs(node->left, level + 1, result);
 }
 
-// TODO
 // Q7: Diagonal Traversal of Binary Tree
 // TC: O(N)
 // SC: O(N)
