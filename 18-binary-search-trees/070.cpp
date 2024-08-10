@@ -35,8 +35,7 @@ bool validateBST(TreeNode *root, long long int minVal, long long int maxVal)
 
 // TC: O(N)
 // SC: O(H)
-// TODO
-// Alternative approach, check inorder traversal is sorted or not, using two pointers, do not store the traversal in array
+// Alternative approach, check inorder traversal is sorted or not, using two pointers, do not store the traversal in array, use BST iterator
 
 // Q2:
 // Leetcode 230: Kth Smallest Element in a BST
@@ -69,7 +68,7 @@ void inorder(TreeNode *root, int k, int &result, int &count)
     inorder(root->right, k, result, count);
 }
 
-// TODO
+// optimized approach
 // TC: O(N)
 // SC: O(1)
 // inorder traversal using morris traversal
