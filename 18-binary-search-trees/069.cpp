@@ -15,6 +15,7 @@ public:
     TreeNode(int data, TreeNode *left, TreeNode *right) : data(data), left(left), right(right) {}
 };
 
+// Recursive/Normal BST implementation
 class BST
 {
     TreeNode *root;
@@ -30,7 +31,126 @@ public:
 
     // TC: O(log(N)), log base 2
     // SC: O(1)
-    TreeNode *searchBST(int target)
+    TreeNode *search(int target)
+    {
+        TreeNode *cur = root;
+        while (cur != NULL && cur->data != target)
+            cur = target < cur->data ? cur->left : cur->right;
+        return cur;
+    }
+
+    // Insert in BST
+public:
+    // TC: O(H)
+    // SC: O(H)
+    void insert(int value)
+    {
+        root = insert_helper(root, value);
+    }
+
+private:
+    TreeNode *insert_helper(TreeNode *root, int value)
+    {
+        if (root == NULL)
+        {
+            root = new TreeNode(value);
+            return root;
+        }
+
+        if (value < root->data)
+            root->left = insert_helper(root->left, value);
+        else
+            root->right = insert_helper(root->right, value);
+
+        return root;
+    }
+
+    // Delete in BST
+public:
+    // TC: O(H)
+    // SC: O(H)
+    void remove(int target)
+    {
+        root = deleteNode(root, target);
+    }
+
+private:
+    TreeNode *deleteNode(TreeNode *root, int key)
+    {
+        if (root == NULL)
+            return NULL;
+
+        if (key < root->data)
+            root->left = deleteNode(root->left, key);
+        else if (key > root->data)
+            root->right = deleteNode(root->right, key);
+        else
+        {
+            if (root->left == NULL)
+            {
+                TreeNode *temp = root->right;
+                delete root;
+                return temp;
+            }
+            else if (root->right == NULL)
+            {
+                TreeNode *temp = root->left;
+                delete root;
+                return temp;
+            }
+
+            TreeNode *temp = minValueNode(root->right);
+            root->data = temp->data;
+            root->right = deleteNode(root->right, temp->data);
+        }
+
+        return root;
+    }
+
+    TreeNode *minValueNode(TreeNode *node)
+    {
+        TreeNode *current = node;
+        while (current && current->left != NULL)
+            current = current->left;
+        return current;
+    }
+
+public:
+    // Min and Max in BST
+
+    int min()
+    {
+        TreeNode *cur = root;
+        while (cur->left != NULL)
+            cur = cur->left;
+        return cur->data;
+    }
+
+    int max()
+    {
+        TreeNode *cur = root;
+        while (cur->right != NULL)
+            cur = cur->right;
+        return cur->data;
+    }
+};
+
+class BST_optimized
+{
+    TreeNode *root;
+
+public:
+    BST_optimized() : root(NULL) {}
+    BST_optimized(int data) : root(new TreeNode(data)) {}
+
+    // BFS / Level Order Traversal
+    void print();
+
+    // Search in BST
+
+    // TC: O(log(N)), log base 2
+    // SC: O(1)
+    TreeNode *search(int target)
     {
         TreeNode *cur = root;
         while (cur != NULL && cur->data != target)
@@ -83,13 +203,16 @@ public:
 
     // TC: O(H)
     // SC: O(1)
-    void *remove(int target)
+    void remove(int target)
     {
         if (root == NULL)
-            return NULL;
+            return;
 
         if (root->data == target)
-            return deleteNode(root);
+        {
+            root = deleteNode(root);
+            return;
+        }
 
         TreeNode *current = root;
 
@@ -194,7 +317,7 @@ int main()
 
     // Search in BST
     int target = 10;
-    TreeNode *found = bst.searchBST(target);
+    TreeNode *found = bst.search(target);
     cout << "Value found at node: " << (found ? found->data : -1) << endl;
     cout << endl;
     cout << endl;
@@ -215,6 +338,42 @@ int main()
 }
 
 void BST::print()
+{
+    if (root == NULL)
+        return;
+
+    vector<vector<int>> result;
+    queue<TreeNode *> q;
+    q.push(root);
+
+    while (!q.empty())
+    {
+        int size = q.size();
+        vector<int> level;
+        for (int i = 0; i < size; i++)
+        {
+            TreeNode *node = q.front();
+            q.pop();
+
+            level.push_back(node->data);
+
+            if (node->left)
+                q.push(node->left);
+            if (node->right)
+                q.push(node->right);
+        }
+        result.push_back(level);
+    }
+
+    for (int i = 0; i < result.size(); i++)
+    {
+        for (int j = 0; j < result[i].size(); j++)
+            cout << result[i][j] << " ";
+        cout << endl;
+    }
+}
+
+void BST_optimized::print()
 {
     if (root == NULL)
         return;
