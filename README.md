@@ -343,3 +343,12 @@
 ## 🌳 AVL Trees
 
 -   Adelson-Velsky and Landis(AVL) Tree & its Implementation
+
+## ⛰️ Heap
+
+74. Heaps & its Implementation
+    -   Insertion
+    -   Deletion
+    -   Heapify
+    -   Heap Sort
+    -   Priority Queue STL
