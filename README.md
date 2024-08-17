@@ -352,3 +352,11 @@
     -   Heapify
     -   Heap Sort
     -   Priority Queue STL
+75. Heap Interview Questions
+    -   Kth Smallest Element in an Array
+    -   Kth Largest Element in an Array
+    -   Is Binary Tree Max Heap
+    -   Merge two binary Max heaps
+    -   Minimum Cost of ropes
+    -   Convert BST to Min Heap
+    -   Convert BST to Max Heap
