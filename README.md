@@ -360,3 +360,7 @@
     -   Minimum Cost of ropes
     -   Convert BST to Min Heap
     -   Convert BST to Max Heap
+76. Heap Interview Questions
+    -   Kth Largest Sum Subarray
+    -   Merge k Sorted Arrays
+    -   Merge k Sorted Lists
