@@ -364,3 +364,7 @@
     -   Kth Largest Sum Subarray
     -   Merge k Sorted Arrays
     -   Merge k Sorted Lists
+77. Heap Interview Questions
+    -   Smallest Range Covering Elements from K Lists
+    -   Find Median from Data Stream
+    -   Reorganize String
