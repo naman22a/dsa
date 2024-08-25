@@ -372,3 +372,7 @@
 ## #️⃣ Hashmaps
 
 78. Hashmaps & its Implementation
+
+## 🔤 Trie / Prefix Tree
+
+79. Implement Trie (Prefix Tree)
