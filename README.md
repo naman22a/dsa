@@ -368,3 +368,7 @@
     -   Smallest Range Covering Elements from K Lists
     -   Find Median from Data Stream
     -   Reorganize String
+
+## #️⃣ Hashmaps
+
+78. Hashmaps & its Implementation
