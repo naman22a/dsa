@@ -376,3 +376,4 @@
 ## 🔤 Trie / Prefix Tree
 
 79. Implement Trie (Prefix Tree)
+80. Longest Common Prefix
