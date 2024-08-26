@@ -383,3 +383,4 @@
 
 82. Rat in a Maze Problem
 83. N-Queens
+84. Sudoku Solver
