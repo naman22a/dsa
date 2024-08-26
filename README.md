@@ -378,3 +378,7 @@
 79. Implement Trie (Prefix Tree)
 80. Longest Common Prefix
 81. Implement a Phone Directory Using Trie
+
+## 🔃 Backtracking
+
+82. Rat in a Maze Problem
