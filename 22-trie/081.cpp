@@ -109,6 +109,8 @@ public:
     }
 };
 
+// TC: O(|s| * n * max|contact[i]|)
+// SC: O(n * max|contact[i]|)
 vector<vector<string>> displayContacts(int n, string contact[], string s)
 {
     Trie *trie = new Trie();
