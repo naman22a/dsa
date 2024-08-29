@@ -384,3 +384,7 @@
 82. Rat in a Maze Problem
 83. N-Queens
 84. Sudoku Solver
+
+## 📈 Graphs
+
+85. Introduction to Graphs || Creation and Implementation
