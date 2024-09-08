@@ -197,69 +197,69 @@ vector<vector<int>> floodFill(vector<vector<int>> &image, int sr, int sc, int co
 
 // TC: O(M.N)
 // SC: O(M.N)
+
+// using a Multi Source BFS
+
 int orangesRotting(vector<vector<int>> &grid)
 {
-    int ROWS = grid.size();
-    int COLS = grid[0].size();
-
-    queue<pair<pair<int, int>, int>> q; // {{ r, c }, time }
-    vector<vector<int>> visited;
-
-    for (int r = 0; r < ROWS; r++)
-    {
-        for (int c = 0; c < COLS; c++)
-        {
-            // is rotten
-            if (grid[r][c] == 2)
-            {
-                q.push({{r, c}, 0});
-                visited[r][c] = 2; // marked as rotten
-            }
-            else
-            {
-                visited[r][c] = 0;
-            }
-        }
-    }
+    int ROWS = grid.size(), COLS = grid[0].size();
+    queue<pair<int, int>> q;
+    vector<pair<int, int>> directions = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
     int time = 0;
-    int deltaRow[] = {-1, 0, 1, 0};
-    int deltaCol[] = {0, 1, 0, -1};
+    int fresh = 0;
 
-    while (!q.empty())
-    {
-        int r = q.front().first.first;
-        int c = q.front().first.second;
-        int t = q.front().second;
-        time = max(time, t);
-        q.pop();
-
-        for (int i = 0; i < 4; i++)
-        {
-            int nei_row = r + deltaRow[i];
-            int nei_col = c + deltaCol[i];
-
-            if (nei_row >= 0 && nei_row < ROWS && nei_col >= 0 && nei_col < COLS && visited[nei_row][nei_col] != 2 && grid[nei_row][nei_col] == 1)
-            {
-                q.push({{nei_row, nei_col}, t + 1});
-                visited[nei_row][nei_col] = 1;
-            }
-        }
-    }
-
-    // edge case
     for (int r = 0; r < ROWS; r++)
     {
         for (int c = 0; c < COLS; c++)
         {
-            if (visited[r][c] != 2 && grid[r][c] == 1)
-                return -1;
+            // count the number of fresh oranges
+            if (grid[r][c] == 1)
+                fresh++;
+
+            // add rotten oranges to the queue
+            if (grid[r][c] == 2)
+                q.push({r, c});
         }
     }
 
-    return time;
-}
+    while (!q.empty() && fresh > 0)
+    {
+        // to avoid the loop from changing it's iteration count, we store queue length in a variable as it is mutated in the loop body
+        int length = q.size();
+        for (int i = 0; i < length; i++)
+        {
+            int r = q.front().first;
+            int c = q.front().second;
+            q.pop();
 
+            for (auto dir : directions)
+            {
+                int dr = dir.first;
+                int dc = dir.second;
+
+                int row = dr + r;
+                int col = dc + c;
+
+                // if out of bounds and not fresh orange
+                if (row < 0 || row >= ROWS || col < 0 || col >= COLS || grid[row][col] != 1)
+                    continue;
+
+                // make fresh orange rotten
+                grid[row][col] = 2;
+                q.push({row, col});
+
+                // decrease the number of fresh oranges
+                fresh--;
+            }
+        }
+
+        // increment time after one level or layer
+        time++;
+    }
+
+    return (fresh == 0) ? time : -1;
+}
 int main()
 {
 
