@@ -390,8 +390,7 @@
 85. Introduction to Graphs || Creation and Implementation
 86. BFS Traversal in Graph
 87. DFS Traversal in Graph
-
--   DFS and BFS Questions
+88. DFS and BFS Questions
     -   Number of Provinces
     -   Number of Islands
     -   Flood Fill Algorithm
