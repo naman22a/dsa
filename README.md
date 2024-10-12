@@ -390,10 +390,15 @@
 85. Introduction to Graphs || Creation and Implementation
 86. BFS Traversal in Graph
 87. DFS Traversal in Graph
-88. DFS and BFS Questions
+88. Graph Questions
     -   Number of Provinces
     -   Number of Islands
     -   Flood Fill Algorithm
     -   Rotting Oranges / Rotten Oranges
 89. Detect a Cycle in an Undirected Graph using BFS
 90. Detect a Cycle in an Undirected Graph using DFS
+91. Graph Questions
+    -   01 Matrix / Distance of nearest cell having 1
+    -   Surrounded Regions / Replace O's with X's
+    -   Number of Enclaves
+    -   Number of Distinct Islands
