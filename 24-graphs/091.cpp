@@ -13,7 +13,7 @@ vector<vector<int>> updateMatrix(vector<vector<int>> &mat)
 {
     int ROWS = mat.size();
     int COLS = mat[0].size();
-    queue<pair<pair<int, int>, int>> q;
+    queue<pair<pair<int, int>, int>> q; // ( (r, c), steps )
 
     vector<vector<int>> visited(ROWS, vector<int>(COLS, 0));
     vector<vector<int>> distances(ROWS, vector<int>(COLS, 0));
@@ -26,10 +26,6 @@ vector<vector<int>> updateMatrix(vector<vector<int>> &mat)
             {
                 q.push({{r, c}, 0});
                 visited[r][c] = 1;
-            }
-            else
-            {
-                visited[r][c] = 0;
             }
         }
     }
@@ -66,7 +62,7 @@ vector<vector<int>> updateMatrix(vector<vector<int>> &mat)
 
 // Q2:
 // Leetcode 130: Surrounded Regions
-
+/*
 void dfs(vector<vector<char>> &board, vector<vector<int>> &visited, int ROWS, int COLS, int r, int c)
 {
     if (r < 0 || r >= ROWS || c < 0 || c >= COLS || visited[r][c] || board[r][c] == 'X')
@@ -122,6 +118,48 @@ void solve(vector<vector<char>> &board)
                 board[r][c] = 'X';
         }
     }
+} */
+
+void dfs(vector<vector<char>> &board, vector<vector<int>> &visited, int ROWS, int COLS, int r, int c)
+{
+    if (r < 0 || r >= ROWS || c < 0 || c >= COLS || visited[r][c] || board[r][c] == 'X')
+        return;
+
+    visited[r][c] = 1;
+
+    dfs(board, visited, ROWS, COLS, r + 1, c);
+    dfs(board, visited, ROWS, COLS, r - 1, c);
+    dfs(board, visited, ROWS, COLS, r, c + 1);
+    dfs(board, visited, ROWS, COLS, r, c - 1);
+}
+
+// TC: O(M.N)
+// SC: O(M.N)
+void solve(vector<vector<char>> &board)
+{
+    int ROWS = board.size();
+    int COLS = board[0].size();
+    vector<vector<int>> visited(ROWS, vector<int>(COLS, 0));
+
+    // mark boundary regions as visited
+    for (int r = 0; r < ROWS; r++)
+    {
+        for (int c = 0; c < COLS; c++)
+        {
+            if (board[r][c] == 'O' && (r == 0 || c == 0 || r == ROWS - 1 || c == COLS - 1))
+                dfs(board, visited, ROWS, COLS, r, c);
+        }
+    }
+
+    // convert remaining O's into X's
+    for (int r = 0; r < ROWS; r++)
+    {
+        for (int c = 0; c < COLS; c++)
+        {
+            if (!visited[r][c] && board[r][c] == 'O')
+                board[r][c] = 'X';
+        }
+    }
 }
 
 // Q3:
@@ -130,7 +168,7 @@ void solve(vector<vector<char>> &board)
 // TC: O(M.N)
 // SC: O(M.N)
 // can solve this with DFS or BFS (Multi Source)
-int numEnclaves(vector<vector<int>> &grid)
+/* int numEnclaves(vector<vector<int>> &grid)
 {
     int ROWS = grid.size();
     int COLS = grid[0].size();
@@ -189,6 +227,56 @@ int numEnclaves(vector<vector<int>> &grid)
 
     return count;
 }
+ */
+
+// solving using DFS
+void dfs_numEnclaves(vector<vector<int>> &grid, set<pair<int, int>> &visited, int ROWS, int COLS, int r, int c)
+{
+    if (r < 0 || r >= ROWS || c < 0 || c >= COLS || visited.find({r, c}) != visited.end() || grid[r][c] == 0)
+        return;
+
+    visited.insert({r, c});
+
+    dfs_numEnclaves(grid, visited, ROWS, COLS, r + 1, c);
+    dfs_numEnclaves(grid, visited, ROWS, COLS, r - 1, c);
+    dfs_numEnclaves(grid, visited, ROWS, COLS, r, c + 1);
+    dfs_numEnclaves(grid, visited, ROWS, COLS, r, c - 1);
+}
+
+// TC: O(M.N)
+// SC: O(M.N)
+int numEnclaves(vector<vector<int>> &grid)
+{
+    int ROWS = grid.size();
+    int COLS = grid[0].size();
+
+    set<pair<int, int>> visited;
+
+    // mark the boundary regions (1's)
+    for (int r = 0; r < ROWS; r++)
+    {
+        for (int c = 0; c < COLS; c++)
+        {
+            if (r == 0 || c == 0 || r == ROWS - 1 || c == COLS - 1)
+            {
+                dfs_numEnclaves(grid, visited, ROWS, COLS, r, c);
+            }
+        }
+    }
+
+    // count the unvisited 1's
+    int count = 0;
+    for (int r = 0; r < ROWS; r++)
+    {
+        for (int c = 0; c < COLS; c++)
+        {
+            if (visited.find({r, c}) == visited.end() && grid[r][c] == 1)
+                count++;
+        }
+    }
+
+    return count;
+}
 
 // Q4:
 // Leetcode 694: Number of Distinct Islands
@@ -213,8 +301,8 @@ void dfs_(vector<vector<int>> &grid, vector<vector<int>> &visited, int ROWS, int
     }
 }
 
-// TC: O(M.N)
-// SC: O(M.N.log(M.N) + M.N.4)
+// TC: O(M.N.log(M.N) + M.N.4)
+// SC: O(M.N)
 int numDistinctIslands(vector<vector<int>> &grid)
 {
     int ROWS = grid.size();
