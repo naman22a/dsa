@@ -403,3 +403,4 @@
     -   Number of Enclaves
     -   Number of Distinct Islands
 92. Bipartite Graph using BFS and DFS
+93. Detect cycle in a directed graph using DFS
