@@ -404,3 +404,6 @@
     -   Number of Distinct Islands
 92. Bipartite Graph using BFS and DFS
 93. Detect cycle in a directed graph using DFS
+94. Graph Questions
+    -   Word Ladder / Minimum Genetic Mutation
+    -   Word Ladder II
