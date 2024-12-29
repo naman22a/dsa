@@ -18,6 +18,8 @@ void dfs(vector<vector<int>> &adj, vector<int> &visited, stack<int> &st, int nod
     st.push(node);
 }
 
+// TC: O(V + E)
+// SC: O(2V)
 vector<int> topologicalSort(vector<vector<int>> &adj)
 {
     int V = adj.size();
