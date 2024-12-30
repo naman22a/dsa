@@ -408,3 +408,4 @@
     -   Word Ladder / Minimum Genetic Mutation
     -   Word Ladder II
 95. Topological Sort Algorithm | DFS
+96. Kahn's Algorithm | Topological Sort Algorithm | BFS
