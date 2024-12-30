@@ -410,3 +410,7 @@
 95. Topological Sort Algorithm | DFS
 96. Kahn's Algorithm | Topological Sort Algorithm | BFS
 97. Detect a Cycle in Directed Graph | Topological Sort | Kahn's Algorithm | BFS
+98. Topological Sort Questions
+    -   Course Schedule I and II | Pre-requisite Tasks
+    -   Find Eventual Safe States
+    -   Alien dictionary
