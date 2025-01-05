@@ -4,6 +4,7 @@
 #include <unordered_map>
 #include <algorithm>
 #include <string>
+#include <unordered_set>
 using namespace std;
 
 // Q1:
@@ -168,78 +169,86 @@ vector<int> eventualSafeNodes(vector<vector<int>> &graph)
 
 // Q4:
 // Leetcode 296: Alien dictionary
+// see this https://youtu.be/6kTZYvNNyps?si=RqsWPEsJAuAgpS7G
 
-vector<int> topologicalSort(unordered_map<int, vector<int>> &adj);
-
-string findOrder(vector<string> dict, int k)
+class Solution
 {
-    int n = dict.size();
+private:
+    unordered_map<char, unordered_set<char>> adjList;
+    unordered_map<char, bool> visited; // false -> visited, true -> in current path
+    string result;
 
-    // create the graph
-    unordered_map<int, vector<int>> adj;
-    for (int i = 0; i < n - 1; i++)
+public:
+    string foreignDictionary(vector<string> &words)
     {
-        string s1 = dict[i];
-        string s2 = dict[i + 1];
-        int len = min(s1.size(), s2.size());
+        // using topological sort
+        // applied on DAG -> Directed Aycyclic Graph
+        // use DFS or BFS to traverse the graph formed by the letter ordering got from the sorted list of words
+        // cycle in graph => no solution
+        // if connected components are more than 1, then we have multiple solutions
+        // do a post order dfs on a graph to make the alien abcd...xyz
+        // reverse the ouput of post order dfs, which is the topological sort
 
-        for (int j = 0; j < len; j++)
+        for (auto word : words)
         {
-            if (s1[j] != s2[j])
+            for (auto ch : word)
+                adjList[ch];
+        }
+
+        // words.size() - 1 to get each pair, and hence avoid out of range case
+        for (int i = 0; i < words.size() - 1; i++)
+        {
+            string w1 = words[i];
+            string w2 = words[i + 1];
+            int minLength = min(w1.size(), w2.size());
+
+            // prefix of the words is same, but the first word is longer than the second word
+            if (w1.size() > w2.size() && w1.substr(0, minLength) == w2.substr(0, minLength))
+                return "";
+
+            for (int j = 0; j < minLength; j++)
             {
-                adj[s1[j] - 'a'].push_back(s2[j] - 'a');
-                break;
+                // first different character
+                if (w1[j] != w2[j])
+                {
+                    adjList[w1[j]].insert(w2[j]);
+                    break;
+                }
             }
         }
-    }
 
-    vector<int> topo = topologicalSort(adj);
-    string ans = "";
-    for (auto it : topo)
-        ans = ans + char(it + 'a');
-    return ans;
-}
-
-vector<int> topologicalSort(unordered_map<int, vector<int>> &adj)
-{
-    int V = adj.size();
-
-    vector<int> indegree(V, 0);
-
-    for (int node = 0; node < V; node++)
-    {
-        for (auto incommingNode : adj[node])
-            indegree[incommingNode]++;
-    }
-
-    queue<int> q;
-    for (int node = 0; node < V; node++)
-    {
-        if (indegree[node] == 0)
-            q.push(node);
-    }
-
-    vector<int> ans;
-
-    while (!q.empty())
-    {
-        int node = q.front();
-        q.pop();
-
-        ans.push_back(node);
-
-        // node in the topo sort
-        // so remove it from the indegree
-        for (auto nei : adj[node])
+        for (auto &item : adjList)
         {
-            indegree[nei]--;
-            if (indegree[nei] == 0)
-                q.push(nei);
+            char c = item.first;
+            // detected a cycle
+            if (dfs(c))
+                return "";
         }
+
+        reverse(result.begin(), result.end());
+        return result;
     }
 
-    return ans;
-}
+    bool dfs(char c)
+    {
+        // already in current path, but we visited it again => cycle detected
+        if (visited.find(c) != visited.end())
+            return visited[c];
+
+        visited[c] = true;
+
+        for (auto nei : adjList[c])
+        {
+            // cycle detected
+            if (dfs(nei))
+                return true;
+        }
+
+        visited[c] = false;
+        result.push_back(c);
+        return false;
+    }
+};
 
 int main()
 {
