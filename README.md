@@ -415,5 +415,10 @@
     -   Find Eventual Safe States
     -   Alien dictionary
 99. Shortest Paths
-    -   in Undirected Graph with unit weights
-    -   in Directed Acyclic Graph (DAG)
+    -   Undirected Graph with unit weights
+    -   Directed Acyclic Graph (DAG)
+100.    Dijkstra Algorithm
+
+-   using Priority Queue
+-   using Set
+-   print the Shortest Path
