@@ -15,7 +15,7 @@ using namespace std;
 // -> negative cycle
 
 // TC: O(E.log(V))
-// SC: O(V)
+// SC: O(V + E) = O(V + V^2) = O(V^2) // E = V^2
 vector<int> dijkstra(vector<vector<pair<int, int>>> &adj, int src)
 {
     int V = adj.size();
@@ -53,7 +53,7 @@ vector<int> dijkstra(vector<vector<pair<int, int>>> &adj, int src)
 // set stores everything in sorted order
 
 // TC: O(E.log(V))
-// SC: O(V)
+// SC: O(V + E) = O(V + V^2) = O(V^2) // E = V^2
 vector<int> dijkstra_using_set(vector<vector<pair<int, int>>> &adj, int src)
 {
     int V = adj.size();
