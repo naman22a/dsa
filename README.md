@@ -422,3 +422,12 @@
 -   using Priority Queue
 -   using Set
 -   print the Shortest Path
+
+101. Graph Questions
+
+-   Shortest Path in Binary Matrix
+-   Path With Minimum Effort
+-   Cheapest Flights Within K Stops
+-   Network Delay Time
+-   Number of ways to arrive at destination
+-   Minimum Multiplications to reach End
