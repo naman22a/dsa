@@ -455,3 +455,12 @@
 110. Bridges in Graph - Using Tarjan's Algorithm
 111. Articulation Point in Graph
 112. Strongly Connected Components - Kosaraju's Algorithm
+
+## 🤑 Greedy
+
+113. Easy Problems
+
+-   Assign Cookies
+-   Fractional Knapsack
+-   Lemonade Change
+-   Valid Parenthesis String
