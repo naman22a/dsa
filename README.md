@@ -464,3 +464,16 @@
 -   Fractional Knapsack
 -   Lemonade Change
 -   Valid Parenthesis String
+
+114. Medium Problems
+
+-   N meetings in one room
+-   Jump Game
+-   Jump Game II
+-   Minimum Platforms
+-   Job Sequencing Problem
+-   Candy
+-   Shortest Job first
+-   Insert Interval
+-   Merge Intervals
+-   Non-overlapping Intervals
