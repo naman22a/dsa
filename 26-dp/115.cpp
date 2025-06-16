@@ -4,6 +4,8 @@
 using namespace std;
 
 // recursion
+// TC: O(2^N)
+// SC: O(N)
 int fib(int n)
 {
     if (n <= 1)
@@ -24,6 +26,8 @@ int solve(int n, unordered_map<int, int> &dp)
     return dp[n];
 }
 
+// TC: O(N)
+// SC: O(N) + O(N)
 int fib_memo_with_hashmap(int n)
 {
     unordered_map<int, int> dp;
@@ -42,6 +46,8 @@ int solve2(int n, vector<int> &dp)
     return dp[n];
 }
 
+// TC: O(N)
+// SC: O(N) + O(N)
 int fib_memo_with_hashtable(int n)
 {
     vector<int> dp(n + 1, -1);
@@ -50,6 +56,8 @@ int fib_memo_with_hashtable(int n)
 
 // tabulation
 
+// TC: O(N)
+// SC: O(N)
 int fib_tabulation(int n)
 {
     vector<int> dp(n + 1, -1);
@@ -63,6 +71,9 @@ int fib_tabulation(int n)
 }
 
 // space optimization
+
+// TC: O(N)
+// SC: O(1)
 int fib_space_optimization(int n)
 {
     int prev2 = 0;
