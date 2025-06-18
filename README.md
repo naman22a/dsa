@@ -492,3 +492,4 @@
 118. Frog Jump with K Distance
 119. Maximum Sum of Non-Adjacent Elements | House Robber | DP on Subsequences
 120. House Robber II | DP on Subsequences
+121. Ninja's Training | 2D DP
