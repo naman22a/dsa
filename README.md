@@ -495,3 +495,4 @@
 121. Ninja's Training | 2D DP
 122. Unique Paths
 123. Unique Paths II
+124. Minimum Path Sum
