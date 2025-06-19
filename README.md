@@ -496,3 +496,4 @@
 122. Unique Paths
 123. Unique Paths II
 124. Minimum Path Sum
+125. Minimum path sum in Triangular Grid
