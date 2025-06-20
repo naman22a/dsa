@@ -23,7 +23,8 @@ public:
         prev[0] = cur[0] = true;
 
         // base cases
-        prev[arr[0]] = true;
+        if (arr[0] < sum)
+            prev[arr[0]] = true;
 
         for (int i = 1; i <= n - 1; i++)
         {
@@ -49,7 +50,8 @@ public:
         // base cases
         for (int i = 0; i <= n - 1; i++)
             dp[i][0] = true;
-        dp[0][arr[0]] = true;
+        if (arr[0] < sum)
+            dp[0][arr[0]] = true;
 
         for (int i = 1; i <= n - 1; i++)
         {
