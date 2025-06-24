@@ -505,3 +505,4 @@
 131. Counts Subsets with Sum K
 132. Count Partitions With Given Difference
 133. 0/1 Knapsack
+134. Coin Change
