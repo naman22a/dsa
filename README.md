@@ -513,3 +513,4 @@
 139. Longest Common Subsequence
 140. Print Longest Common Subsequence
 141. Longest Common Substring
+142. Longest Palindromic Subsequence
