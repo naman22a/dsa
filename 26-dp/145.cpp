@@ -1,0 +1,78 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+// Q1:
+// Leetcode 1092: Shortest Common Supersequence
+class Solution
+{
+public:
+    string shortestCommonSupersequence(string str1, string str2)
+    {
+        int n = str1.size();
+        int m = str2.size();
+        vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
+
+        // base case
+        for (int j = 0; j <= m - 1; j++)
+            dp[0][j] = 0;
+        for (int i = 0; i <= n - 1; i++)
+            dp[i][0] = 0;
+
+        for (int index1 = 1; index1 <= n; index1++)
+        {
+            for (int index2 = 1; index2 <= m; index2++)
+            {
+                if (str1[index1 - 1] == str2[index2 - 1])
+                    dp[index1][index2] = 1 + dp[index1 - 1][index2 - 1];
+                else
+                    dp[index1][index2] = 0 + max(dp[index1 - 1][index2], dp[index1][index2 - 1]);
+            }
+        }
+
+        string ans = "";
+        int i = n, j = m;
+        while (i > 0 && j > 0)
+        {
+            if (str1[i - 1] == str2[j - 1])
+            {
+                ans += str1[i - 1];
+                i--, j--;
+            }
+            else if (dp[i - 1][j] > dp[i][j - 1])
+            {
+                ans += str1[i - 1];
+                i--;
+            }
+            else
+            {
+                ans += str2[j - 1];
+                j--;
+            }
+        }
+
+        while (i > 0)
+        {
+            ans += str1[i - 1];
+            i--;
+        }
+
+        while (j > 0)
+        {
+            ans += str2[j - 1];
+            j--;
+        }
+
+        reverse(ans.begin(), ans.end());
+
+        return ans;
+    }
+};
+
+int main()
+{
+
+    return 0;
+}
