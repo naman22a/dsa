@@ -532,3 +532,4 @@
 158. Largest Divisible Subset
 159. Longest String Chain
 160. Longest Bitonic Subsequence
+161. Number of Longest Increasing Subsequence
