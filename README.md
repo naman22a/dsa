@@ -542,3 +542,75 @@
 168. Partition Array for Maximum Sum
 169. Maximal Rectangle
 170. Count Square Submatrices with All Ones
+
+## DSA I left
+
+1. String Algorithms
+
+-   KMP (Knuth-Morris-Pratt Algorithm)
+-   Rabin-Karp
+-   Z-Algorithm
+-   Manacher’s Algorithm (Longest Palindromic Substring in O(n))
+
+2. Segment Trees and Binary Indexed Trees (Fenwick Trees)
+
+-   Crucial for range queries and updates:
+-   Segment Tree (Point Update, Range Query, Lazy Propagation)
+-   Fenwick Tree / BIT
+
+3. Range Queries Techniques
+
+-   Mo’s Algorithm (for offline queries)
+-   Sparse Table (for immutable arrays, RMQ)
+
+4. Suffix Arrays and LCP
+
+-   Needed for advanced string problems like:
+-   Longest Repeated Substring
+-   Counting distinct substrings
+
+5. Geometry
+
+-   Convex Hull (Graham's Scan, Andrew's Monotone Chain)
+-   Line Sweep Algorithms
+-   Segment Intersection
+
+6. Math/Number Theory
+
+-   Modular Inverse (Fermat’s Little Theorem)
+-   Extended Euclidean Algorithm
+-   Chinese Remainder Theorem
+
+7. Game Theory (Optional)
+
+-   Grundy Numbers
+-   Nim Game
+
+8. Design Patterns in DSA (Optional)
+
+-   Sliding Window Optimization
+-   Binary Search on Answer
+-   Monotonic Stack/Queue
+
+9. Graphs
+
+-   Tarjan’s Algorithm for SCC
+-   Applications of SCC (Graph Condensation)
+-   Bridges in Graph (Tarjan's)
+-   Eulerian Path in Undirected and Directed Graphs
+-   Fleury’s Algorithm (Optional)
+
+10. DP
+
+-   Digit DP
+-   Bitmask DP
+-   Memory-Dependent DP (Stateful Recursion)
+-   DP with Trie
+-   MCM Extensions (Partition DP)
+-   Advanced Problems That Mix Concepts
+-   Some problems combine DP + Binary Search or DP + Greedy
+-   Slope Optimization DP
+-   Knuth Optimization
+-   Tree DP
+-   DP on DAG(Topo sort + DP)
+-   Persistent DP
