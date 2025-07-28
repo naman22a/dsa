@@ -83,7 +83,7 @@ public:
 private:
     int f(int i, int j, vector<vector<int>> &obstacleGrid, vector<vector<int>> &dp)
     {
-        if (i >= 0 && j >= 0 && obstacleGrid[i][j] == -1)
+        if (i >= 0 && j >= 0 && obstacleGrid[i][j] == 1)
             return 0;
 
         if (i == 0 && j == 0)
