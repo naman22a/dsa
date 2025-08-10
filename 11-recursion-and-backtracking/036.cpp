@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 // Quick Sort
@@ -71,6 +72,47 @@ void qs(int arr[], int left, int right)
 void quick_sort(int arr[], int size)
 {
     qs(arr, 0, size - 1);
+}
+
+// Striver's Quick Sort
+
+int partition2(vector<int> &arr, int low, int high)
+{
+    int pivot = arr[low];
+
+    int i = low;
+    int j = high;
+
+    while (i < j)
+    {
+        while (arr[i] <= pivot && i < high)
+            i++;
+
+        while (arr[j] > pivot && j > low)
+            j--;
+
+        if (i < j)
+            swap(arr[i], arr[j]);
+    }
+
+    swap(arr[j], arr[low]);
+    return j;
+}
+
+void qs2(vector<int> &arr, int low, int high)
+{
+    if (low >= high)
+        return;
+
+    int pivotIndex = partition2(arr, low, high);
+    qs2(arr, low, pivotIndex - 1);
+    qs2(arr, pivotIndex + 1, high);
+}
+
+void quick_sort2(vector<int> &arr)
+{
+    int n = arr.size();
+    qs2(arr, 0, n - 1);
 }
 
 void printArray(int arr[], int size)
