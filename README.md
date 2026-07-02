@@ -203,21 +203,6 @@ This repository follows concepts and problems inspired by:
 
 ---
 
-## 🚀 Future Additions
-
-- ⏳ Segment Tree
-- ⏳ Fenwick Tree
-- ⏳ KMP Algorithm
-- ⏳ Rabin Karp
-- ⏳ Z Algorithm
-- ⏳ Suffix Arrays
-- ⏳ Digit DP
-- ⏳ Bitmask DP
-- ⏳ Tree DP
-- ⏳ Advanced Graph Algorithms
-
----
-
 ## 🎯 Purpose
 
 This repository served as my personal learning log and interview preparation notebook.
