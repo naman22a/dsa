@@ -4,40 +4,56 @@
 
 ![C++](https://img.shields.io/badge/C%2B%2B-17-blue)
 ![Problems Solved](https://img.shields.io/badge/Problems-170%2B-success)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 ![DSA](https://img.shields.io/badge/Focus-Interview%20Preparation-orange)
 
 ### 🚀 My journey through Data Structures and Algorithms
 
-Mastering problem solving one question at a time.
+### 📦 Archived Learning Repository
+
+A collection of my Data Structures and Algorithms solutions, notes, and implementations completed during 2024–2025.
+
+This repository is preserved as a snapshot of my learning journey and is no longer under active development.
 
 </div>
 
 ---
 
-## 📖 About
+## 📦 Archive Notice
 
-This repository contains my solutions, notes, and implementations for various **Data Structures and Algorithms** topics.
+This repository has been archived to preserve my DSA learning journey from 2024–2025.
 
-The goal of this repository is to:
+It contains solved problems, topic-wise implementations, notes, and practice completed while preparing for coding interviews and strengthening my problem-solving skills.
 
-- 🎯 Strengthen problem-solving skills
-- 💼 Prepare for coding interviews
-- 🏆 Practice competitive programming
-- 📚 Build a structured DSA knowledge base
-- 🚀 Track my learning progress
+Although this repository is no longer actively maintained, I am continuing to solve DSA problems and work on more advanced topics in newer repositories and projects.
 
 ---
 
-## 📊 Repository Stats
+## 📖 About
 
-| 📌 Metric         | 📈 Count             |
+This repository documents my journey of learning Data Structures and Algorithms from scratch.
+
+It contains:
+
+- ✅ Topic-wise implementations
+- ✅ Interview problems
+- ✅ Competitive programming practice
+- ✅ Notes and reference implementations
+- ✅ Progressive learning across fundamental and advanced topics
+
+The primary goal was to build a strong foundation in algorithms and problem solving while preparing for software engineering interviews.
+
+---
+
+## 📊 Repository Snapshot
+
+| 📌 Metric         | 📈 Value             |
 | ----------------- | -------------------- |
+| Timelione         | 2024-2025            |
 | Problems Solved   | 170+                 |
 | Languages         | C++                  |
 | Topics Covered    | 15+                  |
 | Difficulty Levels | Easy • Medium • Hard |
-| Status            | Ongoing              |
+| Status            | Archived             |
 
 ---
 
@@ -202,20 +218,22 @@ This repository follows concepts and problems inspired by:
 
 ---
 
-## 🌟 If You Find This Useful
+## 🎯 Purpose
 
-Consider giving the repository a ⭐.
+This repository served as my personal learning log and interview preparation notebook.
 
-It motivates me to continue improving and adding more solutions.
+It represents the foundation of my programming journey before moving on to larger software engineering, systems, cloud-native, and machine learning projects.
+
+## ⭐ Support
+
+If you found this repository useful, consider giving it a ⭐.
 
 ---
 
 <div align="center">
 
-### 💻 Happy Coding 🚀
+Archived • Preserved for Reference • 2024–2025
 
-⭐ Star the repository if it helped you.
-
-🧠 Keep Learning • Keep Building • Keep Solving
+Happy Coding! 🚀
 
 </div>
